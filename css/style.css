@@ -98,13 +98,13 @@ h2 {
 /* Coming Soon Section */
 .coming-soon {
   position: relative;
-  min-height: 90vh;
+  min-height: 96vh; /* Increased to push footer to bottom */
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Changed from center to flex-start */
   justify-content: center;
   background: url('https://via.placeholder.com/1920x1080/1a1a1a/ff0000?text=SIN+') no-repeat center center/cover;
   text-align: center;
-  padding: 60px 0;
+  padding: 40px 0; /* Reduced top padding */
 }
 
 .coming-soon .overlay {
@@ -121,12 +121,13 @@ h2 {
   z-index: 1;
   max-width: 800px;
   margin: 0 auto;
+  padding-top: 30px; /* Added specific top padding */
 }
 
 .logo h1 {
-  margin-bottom: 20px;
+  margin-bottom: 10px; /* Reduced bottom margin */
   text-transform: uppercase;
-  font-size: 8rem;
+  font-size: 7rem; /* Slightly reduced size */
   letter-spacing: 8px;
   color: var(--primary-color);
   text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
@@ -134,13 +135,14 @@ h2 {
 }
 
 .coming-soon h2 {
-  margin-bottom: 40px;
+  margin-top: 0; /* Reset top margin */
+  margin-bottom: 30px; /* Reduced bottom margin */
   letter-spacing: 10px;
 }
 
 .tagline {
   font-size: 1.5rem;
-  margin-bottom: 40px;
+  margin-bottom: 30px; /* Reduced bottom margin */
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -181,7 +183,7 @@ h2 {
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 30px; /* Reduced bottom margin */
 }
 
 .countdown-item {
@@ -210,11 +212,11 @@ h2 {
 
 /* Newsletter Form */
 .newsletter-form-container {
-  margin-bottom: 40px;
+  margin-bottom: 30px; /* Reduced bottom margin */
 }
 
 .newsletter-form-container p {
-  margin-bottom: 20px;
+  margin-bottom: 15px; /* Reduced bottom margin */
   color: var(--text-color-muted);
 }
 
@@ -253,7 +255,7 @@ h2 {
   display: flex;
   justify-content: center;
   gap: 15px;
-  margin-top: 30px;
+  margin-top: 20px; /* Reduced top margin */
 }
 
 .social-icon {
@@ -280,7 +282,7 @@ h2 {
 }
 
 .footer-bottom {
-  padding: 20px 0;
+  padding: 15px 0; /* Reduced padding */
   text-align: center;
   color: var(--text-color-muted);
   font-size: 0.9rem;
