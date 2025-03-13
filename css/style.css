@@ -98,13 +98,13 @@ h2 {
 /* Coming Soon Section */
 .coming-soon {
   position: relative;
-  min-height: 96vh; /* Increased to push footer to bottom */
+  min-height: 96vh; /* Keep height to push footer to bottom */
   display: flex;
-  align-items: flex-start; /* Changed from center to flex-start */
+  align-items: flex-start;
   justify-content: center;
   background: url('https://via.placeholder.com/1920x1080/1a1a1a/ff0000?text=SIN+') no-repeat center center/cover;
   text-align: center;
-  padding: 40px 0; /* Reduced top padding */
+  padding: 40px 0;
 }
 
 .coming-soon .overlay {
@@ -121,33 +121,42 @@ h2 {
   z-index: 1;
   max-width: 800px;
   margin: 0 auto;
-  padding-top: 30px; /* Added specific top padding */
+  padding-top: 30px;
+}
+
+/* Logo styling - made more visible */
+.logo {
+  margin-bottom: 20px;
 }
 
 .logo h1 {
-  margin-bottom: 10px; /* Reduced bottom margin */
+  margin-bottom: 10px;
   text-transform: uppercase;
-  font-size: 7rem; /* Slightly reduced size */
+  font-size: 7rem;
   letter-spacing: 8px;
   color: var(--primary-color);
   text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
   animation: pulse 3s infinite alternate;
+  /* Ensure logo is visible */
+  opacity: 1 !important; 
+  transform: translateY(0) !important;
+  display: block;
 }
 
 .coming-soon h2 {
-  margin-top: 0; /* Reset top margin */
-  margin-bottom: 30px; /* Reduced bottom margin */
+  margin-top: 0;
+  margin-bottom: 30px;
   letter-spacing: 10px;
 }
 
 .tagline {
   font-size: 1.5rem;
-  margin-bottom: 30px; /* Reduced bottom margin */
+  margin-bottom: 30px;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
-/* Reveal Text Animation */
+/* Reveal Text Animation - but not for the logo */
 .reveal-text, .reveal-text-delay {
   opacity: 0;
   transform: translateY(30px);
@@ -156,6 +165,13 @@ h2 {
 
 .reveal-text-delay {
   animation-delay: 0.3s;
+}
+
+/* Logo has its own animation */
+.logo .reveal-text {
+  opacity: 1;
+  transform: translateY(0);
+  animation: pulse 3s infinite alternate;
 }
 
 @keyframes revealText {
@@ -183,7 +199,7 @@ h2 {
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin-bottom: 30px; /* Reduced bottom margin */
+  margin-bottom: 30px;
 }
 
 .countdown-item {
@@ -212,11 +228,11 @@ h2 {
 
 /* Newsletter Form */
 .newsletter-form-container {
-  margin-bottom: 30px; /* Reduced bottom margin */
+  margin-bottom: 30px;
 }
 
 .newsletter-form-container p {
-  margin-bottom: 15px; /* Reduced bottom margin */
+  margin-bottom: 15px;
   color: var(--text-color-muted);
 }
 
@@ -255,7 +271,7 @@ h2 {
   display: flex;
   justify-content: center;
   gap: 15px;
-  margin-top: 20px; /* Reduced top margin */
+  margin-top: 20px;
 }
 
 .social-icon {
@@ -282,7 +298,7 @@ h2 {
 }
 
 .footer-bottom {
-  padding: 15px 0; /* Reduced padding */
+  padding: 15px 0;
   text-align: center;
   color: var(--text-color-muted);
   font-size: 0.9rem;
